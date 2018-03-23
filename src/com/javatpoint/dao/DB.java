@@ -1,0 +1,13 @@
+package com.javatpoint.dao;
+import java.sql.*;
+public class DB {
+public static Connection getCon(){
+	Connection con=null;
+	try{
+		Class.forName("com.mysql.jdbc.Driver");
+		//jdbc:mysql://sqlserver:3306/UserDB
+		con=DriverManager.getConnection("jdbc:mysql:@sqlserver:3306:UserDB","root","");
+	}catch(Exception ex){System.out.println(ex);}
+	return con;
+}
+}
